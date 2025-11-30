@@ -23,7 +23,7 @@ Nama repo:
 
 ### 2. Membuat branch `dev-docker`
 1. Jalankan di WSL:
-git checkout -b dev-docker
+   git checkout -b dev-docker
 
 Push branch pertama kali:
 git push -u origin dev-docker
@@ -52,11 +52,14 @@ Isi file docker-compose.yml:
 
 services:
   mysql:
-    image: mysql:latest
-    container_name: mysql_server
+    image: mysql:8.0
+    container_name: mysql-udb
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mydb
+      MYSQL_DATABASE: udb_db
+      MYSQL_USER: udb_user
+      MYSQL_PASSWORD: udb_pass
     ports:
       - "3306:3306"
     volumes:
@@ -64,13 +67,14 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: my_phpmyadmin
+    container_name: phpmyadmin-udb
+    restart: always
     environment:
       PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: root
     ports:
       - "8080:80"
-    depends_on:
-      - mysql
 
 volumes:
   mysql_data:
