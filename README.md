@@ -28,20 +28,19 @@ git checkout -b dev-docker
 Push branch pertama kali:
 git push -u origin dev-docker
 
-2. Menggunakan SSH untuk GitHub
-Untuk melakukan push tanpa username/password, SSH diaktifkan.
+2. Menggunakan SSH untuk GitHub Untuk melakukan push tanpa username/password, SSH diaktifkan.
 
-1. Generate SSH Key
+1. Generate SSH Key:
 ssh-keygen -t ed25519 -C "emailgithub@example.com"
-2. Aktifkan ssh-agent
+2. Aktifkan ssh-agent:
 eval "$(ssh-agent -s)"
-3. Tambahkan SSH key
+3. Tambahkan SSH key:
 ssh-add ~/.ssh/id_ed25519
-4. Copy public key
+4. Copy public key:
 cat ~/.ssh/id_ed25519.pub
 Tambahkan ke GitHub:
 Settings → SSH and GPG Keys → New SSH Key
-5. Test koneksi
+5. Test koneksi:
 ssh -T git@github.com
 Output sukses:
 Hi <username>! You've successfully authenticated.
