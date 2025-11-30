@@ -40,17 +40,15 @@ ssh-add ~/.ssh/id_ed25519
 4. Copy public key
 cat ~/.ssh/id_ed25519.pub
 Tambahkan ke GitHub:
-👉 Settings → SSH and GPG Keys → New SSH Key
-
+Settings → SSH and GPG Keys → New SSH Key
 5. Test koneksi
 ssh -T git@github.com
-
 Output sukses:
 Hi <username>! You've successfully authenticated.
 
 
 
-3. Docker Compose (MySQL + phpMyAdmin)
+### 3. Docker Compose (MySQL + phpMyAdmin)
 Isi file docker-compose.yml:
 
 services:
@@ -80,7 +78,7 @@ volumes:
 
 
   
-4. Cara Menjalankan Project
+### 4. Cara Menjalankan Project
 Jalankan di folder project:
 docker compose up -d
 
@@ -102,7 +100,7 @@ docker compose down -v
 
 
 
-5. SOLUSI MASALAH YANG DITEMUI
+### 5. SOLUSI MASALAH YANG DITEMUI
 1. Error SSH: “could not open a connection to your authentication agent”
 Solusi:
 
