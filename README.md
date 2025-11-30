@@ -1,11 +1,11 @@
 # 240104015-udb-task
-# 📌 UDB Docker Task — MySQL & phpMyAdmin (NIM: 240104015)
+# UDB Docker Task — MySQL & phpMyAdmin (NIM: 240104015)
 
 Repository ini dibuat untuk memenuhi tugas membuat container **MySQL** dan **phpMyAdmin** menggunakan **Docker Compose**, kemudian dipush ke branch `dev-docker` bersamaan dengan tutorial cara menjalankan project ini.
 
 ---
 
-## 📁 Struktur Repository
+## Struktur Repository
 
 .
 ├── docker-compose.yml
@@ -14,7 +14,7 @@ Repository ini dibuat untuk memenuhi tugas membuat container **MySQL** dan **php
 
 ---
 
-# 🚀 1. Menyiapkan GitHub + Branch
+# 1. Menyiapkan GitHub + Branch
 
 ### 1. Membuat repository
 Nama repo:  
@@ -22,15 +22,12 @@ Nama repo:
 
 
 ### 2. Membuat branch `dev-docker`
-Jalankan di WSL:
-
+1. Jalankan di WSL:
 git checkout -b dev-docker
 
-
-
 Push branch pertama kali:
-
 git push -u origin dev-docker
+
 2. Menggunakan SSH untuk GitHub
 Untuk melakukan push tanpa username/password, SSH diaktifkan.
 
